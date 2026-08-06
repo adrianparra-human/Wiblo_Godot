@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bwq34ilno02rv"]
+
+[ext_resource type="Script" uid="uid://c71xhds6gp33r" path="res://Scripts/UI/WibloInput.gd" id="1_ctusl"]
+[ext_resource type="Theme" uid="uid://djd73n6q6kxvp" path="res://Temas/WibloTheme.tres" id="1_wq1t6"]
+
+[node name="WibloInput" type="LineEdit" unique_id=1114579530]
+theme = ExtResource("1_wq1t6")
+theme_type_variation = &"AuthLineEdit"
+script = ExtResource("1_ctusl")

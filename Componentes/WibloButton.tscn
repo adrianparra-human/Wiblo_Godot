@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://3jud54xxmm6t"]
+
+[ext_resource type="Theme" uid="uid://djd73n6q6kxvp" path="res://Temas/WibloTheme.tres" id="1_sp62f"]
+
+[node name="MenuButton" type="Button" unique_id=472554759]
+custom_minimum_size = Vector2(0, 105)
+theme = ExtResource("1_sp62f")
+theme_type_variation = &"PrimaryButton"

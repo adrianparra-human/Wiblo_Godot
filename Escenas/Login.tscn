@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://ordhcag0gvdp"]
+
+[ext_resource type="Script" uid="uid://vpshq2m17tei" path="res://Scripts/UI/Controllers/SafeAreaContainer.gd" id="1_csu3p"]
+[ext_resource type="Texture2D" uid="uid://kcfvimfdvb40" path="res://Recursos/App/Isologo negro.png" id="1_f2mk1"]
+[ext_resource type="Theme" uid="uid://djd73n6q6kxvp" path="res://Temas/WibloTheme.tres" id="3_wf0pg"]
+[ext_resource type="Script" uid="uid://c71xhds6gp33r" path="res://Scripts/UI/WibloInput.gd" id="4_uuo5d"]
+[ext_resource type="Script" uid="uid://cjinojasvmatp" path="res://Scripts/UI/WibloButton.gd" id="5_uxlki"]
+[ext_resource type="Texture2D" uid="uid://dgwgomms4rc5s" path="res://Recursos/App/google-icon-logo-svgrepo-com.svg" id="6_v6orw"]
+[ext_resource type="Texture2D" uid="uid://cdhx2t3gpdjii" path="res://Recursos/App/apple-logo-svgrepo-com.svg" id="7_bgbku"]
+
+[node name="Login" type="Control" unique_id=1820043095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+layout_direction = 4
+
+[node name="Background" type="ColorRect" parent="." unique_id=1508448235]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=1748372786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_csu3p")
+
+[node name="SafeContent" type="Control" parent="SafeArea" unique_id=361098049]
+layout_mode = 2
+
+[node name="TopIconArea" type="AspectRatioContainer" parent="SafeArea/SafeContent" unique_id=429632167]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.775
+anchor_top = 0.025
+anchor_right = 0.95
+anchor_bottom = 0.125
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopIcon" type="TextureRect" parent="SafeArea/SafeContent/TopIconArea" unique_id=1483457352]
+layout_mode = 2
+offset_transform_visual_only = false
+texture = ExtResource("1_f2mk1")
+
+[node name="MarginContainer" type="MarginContainer" parent="SafeArea/SafeContent" unique_id=1163926133]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175
+anchor_top = 0.5
+anchor_right = 0.825
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeArea/SafeContent/MarginContainer" unique_id=1821054898]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer" unique_id=288142676]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer" unique_id=438178230]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer" unique_id=1627967517]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Welcome" type="Label" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=271596669]
+layout_mode = 2
+theme = ExtResource("3_wf0pg")
+theme_type_variation = &"TitleLabel"
+text = "Bienvenido"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WibloInput" type="LineEdit" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=155398790]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_type_variation = &"AuthLineEdit"
+placeholder_text = "Escribe aquí"
+script = ExtResource("4_uuo5d")
+metadata/_custom_type_script = "uid://c71xhds6gp33r"
+
+[node name="WibloInput2" type="LineEdit" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=57327921]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_type_variation = &"AuthLineEdit"
+placeholder_text = "Escribe aquí"
+script = ExtResource("4_uuo5d")
+metadata/_custom_type_script = "uid://c71xhds6gp33r"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1926708764]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=156380278]
+layout_mode = 2
+theme = ExtResource("3_wf0pg")
+theme_type_variation = &"TitleLabel"
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1751973138]
+layout_mode = 2
+theme = ExtResource("3_wf0pg")
+theme_type_variation = &"TitleLabel"
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Login" type="Button" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=402654618]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"PrimaryButton"
+text = "Botón"
+expand_icon = true
+script = ExtResource("5_uxlki")
+metadata/_custom_type_script = "uid://cjinojasvmatp"
+
+[node name="Label" type="Label" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=444136011]
+layout_mode = 2
+theme = ExtResource("3_wf0pg")
+theme_type_variation = &"TitleLabel"
+text = "No cuenta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Register" type="Button" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=197311946]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"PrimaryButton"
+text = "Botón"
+expand_icon = true
+script = ExtResource("5_uxlki")
+metadata/_custom_type_script = "uid://cjinojasvmatp"
+
+[node name="GoogleLogin" type="Button" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=2111014360]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"PrimaryButton"
+text = "Botón"
+expand_icon = true
+script = ExtResource("5_uxlki")
+metadata/_custom_type_script = "uid://cjinojasvmatp"
+
+[node name="TextureRect" type="TextureRect" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoogleLogin" unique_id=844350709]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.1
+anchor_right = 0.05
+anchor_bottom = 0.9
+offset_right = 84.0
+grow_vertical = 2
+texture = ExtResource("6_v6orw")
+expand_mode = 3
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="AppleLogin" type="Button" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=946177280]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"PrimaryButton"
+text = "Botón"
+expand_icon = true
+script = ExtResource("5_uxlki")
+metadata/_custom_type_script = "uid://cjinojasvmatp"
+
+[node name="TextureRect" type="TextureRect" parent="SafeArea/SafeContent/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AppleLogin" unique_id=97415495]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.1
+anchor_right = 0.05
+anchor_bottom = 0.9
+grow_vertical = 2
+texture = ExtResource("7_bgbku")
+expand_mode = 3
+stretch_mode = 4

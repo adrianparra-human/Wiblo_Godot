@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://baks6kacutkla"]
+
+[ext_resource type="Script" uid="uid://bxuoon6l70x0p" path="res://Scripts/UI/Controllers/IntroController.gd" id="1_f2b3h"]
+[ext_resource type="VideoStream" uid="uid://dkf04ycdrm75j" path="res://Recursos/App/IntroHumanMobile.ogv" id="1_nlqx8"]
+
+[node name="Intro" type="Control" unique_id=19459681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+layout_direction = 4
+script = ExtResource("1_f2b3h")
+next_scene = "uid://ordhcag0gvdp"
+
+[node name="Background" type="ColorRect" parent="." unique_id=1174772846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.050980393, 0.050980393, 0.050980393, 1)
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1166174877]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 0.5625
+stretch_mode = 3
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer" unique_id=322056516]
+layout_mode = 2
+stream = ExtResource("1_nlqx8")
+expand = true
